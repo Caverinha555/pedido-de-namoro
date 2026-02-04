@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  height: 100vh;
+  overflow: hidden;
+  background: radial-gradient(circle at top, #ffdee9, #b5fffc);
+  color: #2b2b2b;
+}
+
+/* Telas */
+.screen {
+  display: none;
+  height: 100vh;
+  padding: 40px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.screen.active {
+  display: flex;
+}
+
+/* Entrada cinematográfica */
+.cinematic {
+  animation: cinematicIn 1.8s ease forwards;
+}
+
+@keyframes cinematicIn {
+  from {
+    opacity: 0;
+    transform: scale(1.08);
+    filter: blur(12px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+    filter: blur(0);
+  }
+}
+
+/* Tipografia */
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.glow {
+  color: #ff4d6d;
+  text-shadow: 0 0 15px rgba(255,77,109,0.6);
+}
+
+.soft {
+  font-size: 1.2em;
+  opacity: 0.85;
+}
+
+.poetic {
+  font-size: 1.3em;
+  line-height: 1.8;
+  max-width: 600px;
+}
+
+/* Coração batendo */
+.heartbeat {
+  animation: heartbeat 1.4s infinite;
+}
+
+@keyframes heartbeat {
+  0% { transform: scale(1); }
+  25% { transform: scale(1.08); }
+  40% { transform: scale(1); }
+  60% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* Botões */
+button {
+  margin-top: 30px;
+  padding: 14px 34px;
+  border-radius: 40px;
+  border: none;
+  font-size: 1em;
+  cursor: pointer;
+  background: linear-gradient(135deg, #ff4d6d, #ff85a1);
+  color: white;
+  box-shadow: 0 10px 25px rgba(255,77,109,0.4);
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.12);
+}
+
+.buttons {
+  display: flex;
+  gap: 25px;
+}
+
+/* Mensagem secreta */
+.secret {
+  margin-top: 25px;
+  font-size: 1.1em;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.8s ease;
+}
+
+.secret.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Canvas */
+canvas {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+}

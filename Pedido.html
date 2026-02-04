@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Elloany ✨</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;1,700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<canvas id="background"></canvas>
+
+<audio id="music" src="musica.mp3" loop></audio>
+
+<div class="screen active cinematic" id="screen1">
+  <h1 class="glow">Elloany…</h1>
+  <p class="soft">Antes de qualquer coisa… respira.</p>
+  <button onclick="nextScreen(2)">Continuar</button>
+</div>
+
+<div class="screen cinematic" id="screen2">
+  <p id="typing" class="poetic"></p>
+  <button onclick="nextScreen(3)">Continuar</button>
+</div>
+
+<div class="screen cinematic" id="screen3">
+  <h1 class="heartbeat">Quer namorar comigo?</h1>
+
+  <div class="buttons">
+    <button id="yesBtn">Sim 💖</button>
+    <button id="noBtn">Não 😳</button>
+  </div>
+
+  <p id="secret" class="secret">
+    💌 Não é só um pedido…  
+    é a vontade de dividir meus dias,  
+    minhas risadas  
+    e meus silêncios com você.
+  </p>
+</div>
+
+<div class="screen cinematic" id="screen4">
+  <h1 class="glow">💍 Eu prometo</h1>
+  <p class="soft">
+    Fazer do simples algo especial  
+    e do comum algo inesquecível ✨
+  </p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
